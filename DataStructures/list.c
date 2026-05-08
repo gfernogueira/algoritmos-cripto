@@ -77,13 +77,14 @@ Name##Name_Mod new_##Name##Name_Mod(Type* arr, size_t s) { \
 	// declare_typed_list(string,, char, "\"%c\"" )
 	declare_typed_list(List, CharArr, char*, "\"%s\"")
 	// declare_typed_list(List, char*, "%c")
+	declare_typed_list(List, _Int, int, "%d")
 
 int main(){
 	List_Float a = new_List_Float(NULL, 0); 
 	// string b = new_string((char[]){'a','b','c'}, 3);
-	ListCharArr c = new_ListCharArr((char*)(&(char*[]){"asd", "asd", "asd"}), 3);
-	c.push(&c, "assdsd");
-	c.str(&c);
+	// ListCharArr c = new_ListCharArr((char*)(&(char*[]){"asd", "asd", "asd"}), 3);
+	// c.push(&c, "assdsd");
+	// c.str(&c);
 	a.push(&a, 0.5);
 	a.push(&a, 1);
 	a.push(&a, 0.5);

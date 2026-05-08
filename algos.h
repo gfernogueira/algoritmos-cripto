@@ -3,6 +3,6 @@
 
 void mdce(int a, int b);
 void fermat(int n);
-void crivo();
+void crivo(int n);
 
 #endif
