@@ -11,7 +11,7 @@ typedef struct Name##Name_Mod{ \
 		Type* cur_arr;\
 		void (*push)(struct Name##Name_Mod*, Type); \
 		Type (*pop)(struct Name##Name_Mod*); \
-		void (*str)(struct Name##Name_Mod*); \
+		int (*str)(struct Name##Name_Mod*); \
 \
     } Name##Name_Mod; \
 void push_##Name##Name_Mod(struct Name##Name_Mod* this, Type val) {\
