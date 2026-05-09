@@ -1,6 +1,6 @@
 #include "algos.c"
 
 int main(){
-    crivo(30);
+    crivo(31);
     return 0;
 }
