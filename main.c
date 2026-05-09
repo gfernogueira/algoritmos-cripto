@@ -1,4 +1,4 @@
-#include "algos.c"
+#include "algos.h"
 
 int main(){
     crivo(31);

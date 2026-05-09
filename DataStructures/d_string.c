@@ -1,7 +1,7 @@
 	#include "stdlib.h"
 	#include "stdio.h"
 	#include "string.h"
-	const int list_default_capacity = 16;
+	const int string_default_capacity = 16;
 
 	typedef struct d_string{ 
 		void* this;
@@ -50,7 +50,7 @@
 			 if (arr != ((void *)0)){ init_capacity = s*2;
 			 init_arr = malloc(s * sizeof(char));
 			 memcpy(init_arr, arr, s * sizeof(char));
-		 } else { init_capacity = (s > list_default_capacity) ? s : list_default_capacity;
+		 } else { init_capacity = (s > string_default_capacity) ? s : string_default_capacity;
 			 init_arr = (char*) calloc(init_capacity, sizeof(char));
 		 } d_string* list = (d_string*) malloc(sizeof(d_string));
 		 *list = (d_string){ &list, init_size, init_capacity, init_arr, &push_string, &pop_string, &str_string, &get_string };

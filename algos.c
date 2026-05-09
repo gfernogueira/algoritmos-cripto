@@ -1,6 +1,5 @@
 #include "algos.h"
 #include "DataStructures/list.c"
-#include <math.h>
 
 void mdce(int a, int b){
 	
@@ -15,7 +14,7 @@ void crivo(int n){
     if (n < 3)     n = 3;
 
     List_Int nums = new_List_Int(NULL, 0);
-    for (int i = 3; i < n; i+=2){
+    for (int i = 3; i < n + 1; i+=2){
         nums.push(&nums, i);
     }
 
