@@ -12,6 +12,7 @@
 		 char (*pop)(struct d_string*);
 		 int (*str)(struct d_string*);
 		 char* (*get)(struct d_string*);
+		 d_string* (*concat)(struct d_string*);
 	 } d_string;
 		 void push_string(struct d_string* this, char val) { if(this->size == this->capacity -1){ printf("Resizing dinamic array! current capacity was: %d\n", this->capacity);
 			 this->capacity *= 2;
@@ -41,6 +42,8 @@
 		return ret;
 	}
 
+	char* concat_d_string(d_string* this, d_string* other){}
+
 	 d_string new_string(char* arr, size_t s) { size_t init_capacity;
 			 size_t init_size = s;
 			 char* init_arr;
@@ -54,11 +57,11 @@
 		 return *list;
 	 };
 
-int main(){
-	d_string s = new_string(NULL, 0);
-	s.push(&s, '1');
-	s.push(&s, '1');
-	s.push(&s, '1');
-	s.push(&s, '0');
-	printf("string: %s", s.get(&s));
-}
+// int main(){
+// 	d_string s = new_string(NULL, 0);
+// 	s.push(&s, '1');
+// 	s.push(&s, '1');
+// 	s.push(&s, '1');
+// 	s.push(&s, '0');
+// 	printf("string: %s", s.get(&s));
+// }

@@ -16,12 +16,12 @@ typedef struct Name##Name_Mod{ \
     } Name##Name_Mod; \
 void push_##Name##Name_Mod(struct Name##Name_Mod* this, Type val) {\
 		if(this->size == this->capacity -1){\
-			printf("Resizing dinamic array! current capacity was: %d\n", this->capacity);\
+			/*printf("Resizing dinamic array! current capacity was: %d\n", this->capacity);*/\
 			this->capacity *= 2;\
 			this->cur_arr = realloc(this->cur_arr, this->capacity * sizeof(Type));	\
 		} \
 		this->cur_arr[this->size++] = val;\
-	 printf("pushed " Format "!\n", val); \
+	 /*printf("pushed " Format "!\n", val);*/ \
 	} \
 Type pop_##Name##Name_Mod(Name##Name_Mod* this) { return (this->size > 0) ? this->cur_arr[--(this->size)] : 0; \
 	\
@@ -79,25 +79,25 @@ Name##Name_Mod new_##Name##Name_Mod(Type* arr, size_t s) { \
 	// declare_typed_list(List, char*, "%c")
 	declare_typed_list(List, _Int, int, "%d")
 
-int main(){
-	List_Float a = new_List_Float(NULL, 0); 
-	// string b = new_string((char[]){'a','b','c'}, 3);
-	// ListCharArr c = new_ListCharArr((char*)(&(char*[]){"asd", "asd", "asd"}), 3);
-	// c.push(&c, "assdsd");
-	// c.str(&c);
-	a.push(&a, 0.5);
-	a.push(&a, 1);
-	a.push(&a, 0.5);
-	a.push(&a, 1);
-	a.push(&a, 0.5);
-	a.push(&a, 1);
-	a.str(&a);
-	// b.push(&b, 'h');
-	// b.push(&b, 'e');
-	// b.push(&b, 'l');
-	// b.push(&b, 'l');
-	// b.push(&b, 'o');
-	// b.push(&b, '!');
-	// b.str(&b);
+// int main(){
+// 	List_Float a = new_List_Float(NULL, 0); 
+// 	// string b = new_string((char[]){'a','b','c'}, 3);
+// 	// ListCharArr c = new_ListCharArr((char*)(&(char*[]){"asd", "asd", "asd"}), 3);
+// 	// c.push(&c, "assdsd");
+// 	// c.str(&c);
+// 	a.push(&a, 0.5);
+// 	a.push(&a, 1);
+// 	a.push(&a, 0.5);
+// 	a.push(&a, 1);
+// 	a.push(&a, 0.5);
+// 	a.push(&a, 1);
+// 	a.str(&a);
+// 	// b.push(&b, 'h');
+// 	// b.push(&b, 'e');
+// 	// b.push(&b, 'l');
+// 	// b.push(&b, 'l');
+// 	// b.push(&b, 'o');
+// 	// b.push(&b, '!');
+// 	// b.str(&b);
 
-}
+// }
