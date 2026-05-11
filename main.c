@@ -1,6 +1,6 @@
 #include "algos.h"
 
 int main(){
-    crivo(31);
+    fermat(31);
     return 0;
 }

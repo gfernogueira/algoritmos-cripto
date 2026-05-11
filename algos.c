@@ -1,12 +1,34 @@
 #include "algos.h"
 #include "DataStructures/list.c"
+#include <math.h>
 
 void mdce(int a, int b){
 	
 }
 
 void fermat(int n){
-
+    if (n < 2) {
+        printf("\nnão é primo");
+        return;
+    }
+    
+    int x = (int)ceil(sqrt(n));
+    int y;
+    int z;
+    
+    while (1){
+        z = x * x - n;
+        y = (int)sqrt(z);
+        if (y * y == z) break;
+        ++x;
+    }
+    
+    if (x - y == 1){
+        printf("\nprimo");
+    }
+    else{
+        printf("\nfator1: %d\nfator2: %d", x - y, x + y);
+    }
 }
 
 void crivo(int n){
