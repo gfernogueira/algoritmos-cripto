@@ -1,6 +1,13 @@
 # Prerequisites
 *.d
 *.exe
+a.out
+*.out
+*.o
+*.so
+*.a
+bin/
+build/
 
 # Object files
 *.o
